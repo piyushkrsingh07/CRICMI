@@ -38,7 +38,7 @@ const Login = (props) => {
   });
     }
     const signUpUser=()=>{
-        navigate("/signup")
+        navigate("/signup");
     }
   return (
     <div>
