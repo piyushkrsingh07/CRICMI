@@ -61,7 +61,7 @@ const Signup = (props) => {
       // ...
       seterrorMessage(error.message)
     });
-    navigate("/browse");
+  
     // ...
   })
   .catch((error) => {
@@ -77,15 +77,15 @@ const Signup = (props) => {
     }
   return (
   
-    <div className=' w-screen overflow-x-hidden h-screen'>
-   <form onSubmit={(e)=>e.preventDefault()} className='w-[370px] relative p-12 bg-blue-700 my-[100px] mx-auto right-0 left-0 text-white rounded-lg '>
+    <div className=' w-screen overflow-x-hidden h-screen bg-gray-200'>
+   <form onSubmit={(e)=>e.preventDefault()} className='w-[370px] absolute p-12 bg-black my-36 mx-auto right-0 left-0 text-white rounded-lg bg-opacity-85 mt-[100px] h-[80%] '>
     <p className='font-bold '>Signup to</p>
    <h2 className='font-bold text-xl py-2 text-yellow-400'>Join the CRICINFO family</h2>
-   <input type="text" ref={name} placeholder="Full Name" className='p-2 my-5 w-full bg-transparent border rounded-3xl placeholder:font-bold ' />
-   <input required type="text" ref={email} placeholder="Email Address" className='p-2 my-5 w-full bg-transparent border rounded-3xl placeholder:font-bold ' />
-   <input required type="password" ref={password} placeholder='Password ' className='p-2 my-5 w-full bg-transparent border rounded-3xl placeholder:font-bold'/>
+   <input type="text" ref={name} placeholder="Full Name" className='p-2 my-4 w-full bg-transparent border rounded-3xl placeholder:font-bold ' />
+   <input required type="text" ref={email} placeholder="Email Address" className='p-2 my-4 w-full bg-transparent border rounded-3xl placeholder:font-bold ' />
+   <input required type="password" ref={password} placeholder='Password ' className='p-2 my-4 w-full bg-transparent border rounded-3xl placeholder:font-bold'/>
    <p className='text-red-500 font-bold text-lg py-2'>{errorMessage}</p>
-   <div className='flex flex-col space-y-0 my-5 mb-[-10px]'>
+   <div className='flex flex-col space-y-0 my-2 mb-[-10px]'>
    <button className='w-full py-1 px-auto text-black bg-yellow-400 rounded-3xl 'onClick={handleButtonClick}>SIGNUP</button>
    <p className='py-4 cursor-pointer font-bold text-sm self-center' onClick={signInUser}>Already registered?Sign In Now</p>
    </div>

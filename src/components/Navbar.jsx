@@ -49,7 +49,7 @@ const Navbar = (props) => {
     },[])
   return (
   
-    <div className='absolute w-screen px-8 py-2 bg-gradient-to-b from-black z-10 flex justify-between bg-blue-700'>
+    <div className='absolute w-screen px-8 py-2 bg-gradient-to-b from-black z-10 flex justify-between bg-black'>
     <img
    
     src="https://ucarecdn.com/8afb5061-fe45-4842-8bfc-e30b86af4030/-/preview/169x38/"

@@ -31,7 +31,7 @@ const Login = (props) => {
     
     // ...
     console.log(user);
-    navigate("/browse");
+   
   })
   .catch((error) => {
     const errorCode = error.code;
@@ -44,8 +44,9 @@ const Login = (props) => {
         navigate("/signup");
     }
   return (
-    <div>
-   <form onSubmit={(e)=>e.preventDefault()} className='w-[370px] absolute p-12 bg-blue-700 my-36 mx-auto right-0 left-0 text-white rounded-lg mt-[100px] '>
+    // <div className=' relative bg-[url("https://ucarecdn.com/63ec9cd7-8065-4d3b-b3fa-0c52e68896cb/-/preview/1000x1000/")  h-screen w-screen z-[-1] '>
+    <div className='bg-gray-200 h-screen w-screen'> 
+   <form onSubmit={(e)=>e.preventDefault()} className='w-[370px] absolute p-12 bg-black my-36 mx-auto right-0 left-0 text-white rounded-lg bg-opacity-85 mt-[100px] '>
    <h2 className='font-bold text-xl py-2 text-yellow-400'>Join the CRICINFO family</h2>
    <input required type="text" ref={email} placeholder="Email Address" className='p-2 my-5 w-full bg-transparent border rounded-3xl placeholder:font-bold ' />
    <input required type="password" ref={password} placeholder='Password ' className='p-2 my-5 w-full bg-transparent border rounded-3xl placeholder:font-bold'/>
