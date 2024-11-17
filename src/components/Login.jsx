@@ -5,6 +5,7 @@ import { checkValidData } from '../utils/validate';
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import {auth} from "../utils/firebase"
 
+
 const Login = (props) => {
 
     const [errorMessage,seterrorMessage]=useState(null);
@@ -26,6 +27,8 @@ const Login = (props) => {
   .then((userCredential) => {
     // Signed in 
     const user = userCredential.user;
+ 
+    
     // ...
     console.log(user);
     navigate("/browse");

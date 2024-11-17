@@ -1,9 +1,10 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
 const Browse = () => {
   return (
     <div >
-      THIS IS BROWSE PAGE
+    <NavLink/>
     </div>
   )
 }

@@ -4,6 +4,9 @@ import { useNavigate } from 'react-router-dom';
 import { checkValidData } from '../utils/validate';
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import {auth} from "../utils/firebase"
+import {  updateProfile } from "firebase/auth";
+import { addUser,removeUser } from '../redux/Slices/userSlice';
+import { useDispatch } from 'react-redux';
 
 
 
@@ -15,6 +18,7 @@ const Signup = (props) => {
     const email=useRef(null);
      const password=useRef(null);
      const name=useRef(null);
+     const dispatch=useDispatch();
 
 
 
@@ -36,6 +40,27 @@ const Signup = (props) => {
     // Signed up 
     const user = userCredential.user;
     console.log(user);
+    //abhi bss store m email aur password aaya hai
+    updateProfile(user, {
+      displayName:name.current.value, photoURL: ""
+    }).then(() => {
+      // Profile updated!
+      // ...
+      const {uid,email,displayName,photoURL}=auth.currentUser;
+
+      dispatch(
+        addUser({
+          uid:uid,
+          email:email,
+          displayName:displayName,
+          photoURL:photoURL,
+        })
+      );
+    }).catch((error) => {
+      // An error occurred
+      // ...
+      seterrorMessage(error.message)
+    });
     navigate("/browse");
     // ...
   })
