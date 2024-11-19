@@ -13,7 +13,11 @@ const [playerData,setplayerData]=useState([]);
 // console.log("dekho players ko")
 // console.log(playerData);
 useEffect(()=>{
+  if (indteam && indteam.player) {
     setplayerData(indteam.player);
+  } else {
+    console.warn('indteam or indteam.player is not defined');
+  }
  
 },[indteam])
 
@@ -26,12 +30,12 @@ useEffect(()=>{
 
   
   return (
-    <div className='px-6'>
+    <div className='px-6 '>
         <h1 className='text-3xl py-4 text-white z-10'>{title}</h1>
         <div className='flex overflow-x-scroll p-6 no-scrollbar'>
 
 
-         <div className='flex'>
+         <div className='flex '>
            {Array.isArray(playerData) &&playerData?.map((player) =>(
             <PlayerCard key={player.id} name={player.name}
             imageId={player.imageId} battingStyle={player.battingStyle} bowlingStyle={player.bowlingStyle}/>
