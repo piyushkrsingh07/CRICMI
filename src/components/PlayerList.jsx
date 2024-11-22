@@ -9,14 +9,16 @@ const PlayerList = ({title,indteam}) => {
 //   const{imageId,battingStyle,bowlingStyle}=indteam;
 const [playerData,setplayerData]=useState([]);
 // const indteam=useSelector(store=>store.cricteams?.currIndPlayers)
-// setplayerData(indteam.player);
-// console.log("dekho players ko")
-// console.log(playerData);
+console.log("Current Team Data in list", indteam);
+
+
 useEffect(()=>{
-  if (indteam && indteam.player) {
-    setplayerData(indteam.player);
+  if (indteam ) {
+    const filteredPlayers=indteam.filter(player=>player.id)
+
+    setplayerData(filteredPlayers);
   } else {
-    console.warn('indteam or indteam.player is not defined');
+    console.warn('indteam  is not defined');
   }
  
 },[indteam])
@@ -24,18 +26,20 @@ useEffect(()=>{
 useEffect(()=>{
     if(playerData.length>0){
         console.log("Player data updated:",playerData)
+        const playerIds = playerData.map((player) => player.id);
+        console.log("Player IDs:", playerIds);
     }
 },[playerData])
 
 
   
   return (
-    <div className='px-6 '>
-        <h1 className='text-3xl py-4 text-white z-10'>{title}</h1>
-        <div className='flex overflow-x-scroll p-6 no-scrollbar'>
+    <div className='px-6  '>
+        <h1 className='text-3xl py-4 text-white '>{title}</h1>
+        <div className='flex  p-6 no-scrollbar '>
 
 
-         <div className='flex '>
+         <div className='flex  '>
            {Array.isArray(playerData) &&playerData?.map((player) =>(
             <PlayerCard key={player.id} name={player.name}
             imageId={player.imageId} battingStyle={player.battingStyle} bowlingStyle={player.bowlingStyle}/>
@@ -55,5 +59,4 @@ useEffect(()=>{
     </div>
   )
 }
-
 export default PlayerList

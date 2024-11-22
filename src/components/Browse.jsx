@@ -4,7 +4,7 @@ import useIndiaData from '../../hooks/useIndiaData'
 import MainContainer from './MainContainer';
 
 const Browse = () => {
-  useIndiaData();
+  
   return (
     <div >
        <MainContainer/>
