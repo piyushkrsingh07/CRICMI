@@ -42,7 +42,7 @@ useEffect(()=>{
          <div className='flex  '>
            {Array.isArray(playerData) &&playerData?.map((player) =>(
             <PlayerCard key={player.id} name={player.name}
-            imageId={player.imageId} battingStyle={player.battingStyle} bowlingStyle={player.bowlingStyle}/>
+            imageId={player.imageId} battingStyle={player.battingStyle} bowlingStyle={player.bowlingStyle} id={player.id}/>
             
 
            ))

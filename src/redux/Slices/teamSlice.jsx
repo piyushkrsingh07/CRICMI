@@ -5,6 +5,7 @@ export const teamSlice=createSlice({
     initialState:{
         currIndPlayers:null,
         currIndPlayersImages:null,
+        // currIndPlayersData:null,
     },
     reducers:{
         addCurrIndPlayers:(state,action)=>{
@@ -12,7 +13,10 @@ export const teamSlice=createSlice({
         },
         addCurrIndPlayersImages:(state,action)=>{
             state.currIndPlayersImages=action.payload;
-        }
+        },
+        // addCurrIndPlayersData:(state,action)=>{
+        //     state.currIndPlayersData=action.payload;
+        // }
     }
 
 })
