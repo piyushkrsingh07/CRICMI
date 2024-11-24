@@ -29,7 +29,7 @@ const NewsCard = ({hline,imageId}) => {
                 src={finalImageUrl}
                 alt='NO IMAGE'
               />
-              <div className='text-white font-bold mr-10 absolute mt-[-72px] pr-2 mb-3 pl-2'>{hline}</div>
+              <div className='text-white font-bold mr-10 absolute mt-[-72px] pr-2 mb-3 pl-2 w-[280px]'>{hline}</div>
               </div>
             ) : (
               <p>Loading...</p>
