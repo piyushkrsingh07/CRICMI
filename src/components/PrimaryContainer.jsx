@@ -1,15 +1,24 @@
 import React from 'react'
 import { useLocation } from 'react-router-dom'
 import useIndiaData from '../../hooks/useIndiaData';
-import useIndiaProfileData from '../../hooks/useIndiaProfileData';
+import useIndiaProfileData from '../../hooks/useIndiaProfileData'
 import { useSelector } from 'react-redux';
+
 
 const PrimaryContainer = () => {
   
     const location=useLocation()
+  
+  
     const{finalImageUrl,name,id}=location.state||{};
+    console.log("dekho state location")
+    console.log(location.state)
     console.log("dekkho id container m")
     console.log(id)
+    console.log("dekho final image url in primary")
+    console.log(finalImageUrl)
+   
+    
     useIndiaProfileData({id})
 const playerIndData=useSelector(
     (store)=>store.cricprof?.currIndPlayersData
@@ -18,6 +27,13 @@ console.log("see player india data",playerIndData)
 if (!playerIndData) {
   return <div>Loading player data...</div>;
 }
+// const playerIndData=useSelector(
+//   (store)=>store.cricprof?.currIndPlayersData
+// )
+// console.log("dekho india player data",playerIndData)
+// if(!playerIndData){
+//   return <div>Not got data.....</div>
+// }
 
 
 
