@@ -10,7 +10,7 @@ const usePlayerImages = ({imageId}) => {
 console.log(imageId);
 const [imageUrl, setImageUrl] = useState(null);
 const dispatch=useDispatch();
-    const correct="c"+imageId;
+const correct="c"+imageId;
     // console.log("dekho correct")
     // console.log(correct)
    const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
@@ -19,7 +19,7 @@ useEffect(()=>{
    const fetchImage=async()=>{
     try{
          // Add a delay of 1 second (1000 milliseconds)
-     await delay(1000);
+     await delay(2000);
     console.log("hello")
       const response=await fetch('https://cricbuzz-cricket.p.rapidapi.com/img/v1/i1/'+correct+'/i.jpg?p=gthumb'||'https://cricbuzz-cricket.p.rapidapi.com/img/v1/i1/'+correct+'/i.jpg?p=de'||'https://cricbuzz-cricket.p.rapidapi.com/img/v1/i1/'+correct+'/i.jpg?p=thumb'||'https://cricbuzz-cricket.p.rapidapi.com/img/v1/i1/'+correct+'/i.jpg?p=det',API_OPTIONS)
      

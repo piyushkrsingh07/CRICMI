@@ -1,3 +1,4 @@
+import { newsSlice } from "./Slices/newsSlice";
 import { profileSlice } from "./Slices/profileSlice";
 import { teamSlice } from "./Slices/teamSlice";
 import {userSlice} from "./Slices/userSlice";
@@ -10,6 +11,7 @@ export const store=configureStore({
         user:userSlice.reducer,
         cricteams:teamSlice.reducer,
         cricprof:profileSlice.reducer,
+        cricnews:newsSlice.reducer,
 
     }
 })

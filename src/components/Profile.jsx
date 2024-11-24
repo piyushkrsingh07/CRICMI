@@ -24,8 +24,8 @@ const Profile = () => {
   
 
   return (
-  
-    <div className='w-screen h-screen bg-[#3f61a5] -z-30' >
+      <div>
+          {/* // <div className='w-screen h-screen bg-[#3f61a5] -z-30' > */}
     <div className='pl-4 pr-[50px]   text-white ' style={{ width: '320px' }}>
     <div className='relative'>
       <img className='w-full h-auto absolute z-1' src="https://ucarecdn.com/

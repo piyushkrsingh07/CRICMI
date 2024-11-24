@@ -7,18 +7,12 @@ export default defineConfig({
   server: {
     port: 5175,
     proxy: {
-      '/api': {
-        target: 'http://localhost:5175',
+      '/img': {
+        target: 'https://cricbuzz-cricket.p.rapidapi.com',
         changeOrigin: true,
-        onProxyReq(proxyReq, req, res) {
-          if (req.headers.referer && req.headers.referer.includes('5173')) {
-            res.statusCode = 403;
-            res.end('Requests from this origin are not allowed');
-          }
-        },
+        rewrite: (path) => path.replace(/^\/img/, '/img/v1/i1'),
       },
     },
-   
   },
  
 })
