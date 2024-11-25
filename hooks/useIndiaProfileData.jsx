@@ -11,17 +11,17 @@ const useIndiaProfileData = ({id}) => {
     const dispatch=useDispatch()
     const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
     const getIndiaProfile=async()=>{
-        try{
-            // await delay(1000);
-        const data=await fetch('https://cricbuzz-cricket2.p.rapidapi.com/stats/v1/player/'+id,API_OPTIONS2)
-        const json=await data.json()
-        console.log("dekho player profile")
-        console.log(json)
-        dispatch(addCurrIndPlayersData(json))
-    } 
-    catch(error){
-            console.log("Error in getting profile",error)
-        }
+    //     try{
+    //         // await delay(1000);
+    //     const data=await fetch('https://cricbuzz-cricket2.p.rapidapi.com/stats/v1/player/'+id,API_OPTIONS2)
+    //     const json=await data.json()
+    //     console.log("dekho player profile")
+    //     console.log(json)
+    //     dispatch(addCurrIndPlayersData(json))
+    // } 
+    // catch(error){
+    //         console.log("Error in getting profile",error)
+    //     }
     };
 useEffect(()=>{
    
