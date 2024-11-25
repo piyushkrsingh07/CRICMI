@@ -12,10 +12,14 @@ const ProfileData = () => {
 
 
   const location=useLocation();
-  const {id}=location.state||{};
+  const {id,finalImageUrl,name}=location.state||{};
 
   console.log("dekho id profile data m")
   console.log(id);
+  console.log("dekho final image url in profiledata")
+  console.log(finalImageUrl)
+  console.log("dekho name in profile data")
+  console.log(name)
   useIndiaNews({id})
   const playerIndNews=useSelector(
     (store)=>store.cricnews?.currIndPlayersNews?.storyList
@@ -39,10 +43,10 @@ return <div>Loading player data...</div>;
   return (
   <div className='w-screen overflow-x-hidden'>
     <div className=''>
-        <PrimaryContainer/>
+        <PrimaryContainer finalImageUrl={finalImageUrl} name={name} id={id} />
   {/* <Profile/> */}
     </div>
-    <div className='flex w-screen bg-black'>
+     {/* <div className='flex w-screen bg-black'>
     <div className='w-[75%] h-auto ml-[50px]'>
       <div className='text-white'>{playerIndData.name} Profile</div>
       <div className='text-white'>
@@ -60,7 +64,7 @@ return <div>Loading player data...</div>;
       {/* <div className='w-[22%]'>
 
       </div> */}
-      <div className='flex flex-col gap-y-5 '>
+       {/* <div className='flex flex-col gap-y-5 '>
     <div className='pl-[120px]' >
       <Profile/>
     </div>
@@ -73,7 +77,8 @@ return <div>Loading player data...</div>;
     </div>
     </div>
     </div>
-    </div>
+    </div>  */} 
+
     </div>
   )
 }

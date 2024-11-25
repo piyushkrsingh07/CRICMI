@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { API_OPTIONS } from '../src/utils/constants'
 import { useDispatch } from 'react-redux'
-import { addCurrIndBatStats } from '../src/redux/Slices/profileSlice'
+import { addCurrIndBatStats } from '../src/redux/Slices/batSlice'
 
 const useIndiaBatStats = ({id}) => {
     console.log("id in stat")
@@ -11,6 +11,7 @@ const useIndiaBatStats = ({id}) => {
     
     const getIndiaBatData=async()=>{
 try{
+    // await delay(2000);
     const data=await fetch('https://cricbuzz-cricket.p.rapidapi.com/stats/v1/player/'+id+'/batting',API_OPTIONS)
     const json=await data.json();
     console.log("dekho stats")

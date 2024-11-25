@@ -1,16 +1,18 @@
 import React from 'react'
 import { API_OPTIONS } from '../src/utils/constants'
 import { useDispatch } from 'react-redux'
-import { addCurrIndBowlStats } from '../src/redux/Slices/profileSlice'
+// import { addCurrIndBowlStats } from '../src/redux/Slices/profileSlice'
+import { addCurrIndBowlStats } from '../src/redux/Slices/bowlSlice'
 import { useEffect } from 'react'
 
 const useIndiaBowlStats = ({id}) => {
     const dispatch=useDispatch()
 
-
+    const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
     const getIndiaBowlData=async()=>{
         try{
+            // await delay(2000);
           const data=await fetch('https://cricbuzz-cricket.p.rapidapi.com/stats/v1/player/'+id+'/bowling',API_OPTIONS)
           const json=await data.json()
           console.log("dekho bowl stats")

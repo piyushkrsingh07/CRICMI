@@ -12,8 +12,11 @@ const useIndiaProfileData = ({id}) => {
     const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
     const getIndiaProfile=async()=>{
         try{
-            await delay(1000);
+            await delay(2000);
         const data=await fetch('https://cricbuzz-cricket2.p.rapidapi.com/stats/v1/player/'+id,API_OPTIONS2)
+        if (!data.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+          }
         const json=await data.json()
         console.log("dekho player profile")
         console.log(json)
@@ -22,6 +25,16 @@ const useIndiaProfileData = ({id}) => {
     catch(error){
             console.log("Error in getting profile",error)
         }
+//     try{
+//    const data=await fetch('https://cricbuzz-cricket.p.rapidapi.com/stats/v1/player/'+id,API_OPTIONS)
+//       const json=await data.json()
+//       console.log("dekho player profile")
+//       console.log(json)
+//        dispatch(addCurrIndPlayersData(json))
+//  }
+//     catch(error){
+//        console.log("error in profile",error)
+//     }
  
     }
 useEffect(()=>{

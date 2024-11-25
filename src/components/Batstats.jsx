@@ -10,7 +10,7 @@ const Batstats = () => {
     console.log("dekh id batstat mai")
     console.log(id)
     const playerIndBatStat=useSelector(
-        store=>store.cricprof?.currIndBatStats
+        store=>store.cricbat?.currIndBatStats
     )
     console.log("see batting stats",playerIndBatStat)
     if(!playerIndBatStat)
