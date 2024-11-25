@@ -11,7 +11,7 @@ const Bowlstats = () => {
     console.log(id)
 
     const playerIndBowlStat=useSelector(
-        store=>store.cricbowl?.currIndBowlStats
+        store=>store.cricprof?.currIndBowlStats
     )
     console.log("see bowling stats",playerIndBowlStat)
     if(!playerIndBowlStat){

@@ -5,20 +5,18 @@ import useIndiaProfileData from '../../hooks/useIndiaProfileData'
 import { useSelector } from 'react-redux';
 
 
-const PrimaryContainer = ({finalImageUrl,name,id}) => {
+const PrimaryContainer = () => {
   
-    // const location=useLocation()
+    const location=useLocation()
   
   
-    // const{finalImageUrl,name,id}=location.state||{};
-    // console.log("dekho state location")
-    // console.log(location.state)
+    const{finalImageUrl,name,id}=location.state||{};
+    console.log("dekho state location")
+    console.log(location.state)
     console.log("dekkho id container m")
     console.log(id)
     console.log("dekho final image url in primary")
     console.log(finalImageUrl)
-    console.log("name in primary")
-    console.log(name)
    
     
     useIndiaProfileData({id})

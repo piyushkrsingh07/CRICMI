@@ -1,5 +1,3 @@
-import { batSlice } from "./Slices/batSlice";
-import { bowlSlice } from "./Slices/bowlSlice";
 import { newsSlice } from "./Slices/newsSlice";
 import { profileSlice } from "./Slices/profileSlice";
 import { teamSlice } from "./Slices/teamSlice";
@@ -14,9 +12,6 @@ export const store=configureStore({
         cricteams:teamSlice.reducer,
         cricprof:profileSlice.reducer,
         cricnews:newsSlice.reducer,
-        cricbat:batSlice.reducer,
-        cricbowl:bowlSlice.reducer,
-
 
     }
 })

@@ -64,12 +64,10 @@ navigate("/profiledata",{
   },
 })
 
-  console.log("dekho jo bhja h in location")
+  console.log("dekho jo bhja h")
   console.log(name)
-  console.log("dekho jo id bhja h in location")
+  console.log("dekho jo id bhja h")
   console.log(id)
-  console.log("dekho finalImage url in location")
-  console.log(finalImageUrl)
  
 }
 

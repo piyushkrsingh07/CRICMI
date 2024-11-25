@@ -3,7 +3,6 @@ import { useSelector } from 'react-redux'
 import PlayerList from './PlayerList'
 import useIndiaData from '../../hooks/useIndiaData'
 import { useEffect } from 'react'
-import NewsCard from './NewsCard'
 
 const MainContainer = () => {
     
@@ -25,7 +24,6 @@ const MainContainer = () => {
     <div className='w-screen h-screen bg-black overflow-x-auto no-scrollbar'>
       <div className=' '>
     <PlayerList title={"Indian Team"} indteam={indteam}/>
-    
       </div>
     </div>
   )
