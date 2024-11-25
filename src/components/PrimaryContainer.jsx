@@ -10,7 +10,7 @@ const PrimaryContainer = () => {
     const{finalImageUrl,name,id}=location.state||{};
     console.log("dekkho id container m")
     console.log(id)
-    useIndiaProfileData({id})
+    // useIndiaProfileData({id})
 const playerIndData=useSelector(
     (store)=>store.cricprof?.currIndPlayersData
 )

@@ -1,7 +1,7 @@
 export const API_OPTIONS= {
     method: 'GET',
     headers: {
-   	'x-rapidapi-key': 'f16bb752b0msh0eaefc403055c3dp149793jsna1cdc4bf794a',
+   	'x-rapidapi-key': '22ed060d61msh735e7c4896b63b3p1ec385jsn64a62999e24e',
    	
 		'x-rapidapi-host': 'cricbuzz-cricket.p.rapidapi.com'
     }
@@ -9,7 +9,7 @@ export const API_OPTIONS= {
   export const API_OPTIONS2 = {
     method: 'GET',
     headers: {
-      'x-rapidapi-key': '3ef86ab277mshd027506d56df543p1bb5efjsn35e617a9cde2',
+      'x-rapidapi-key': '22ed060d61msh735e7c4896b63b3p1ec385jsn64a62999e24e',
       'x-rapidapi-host': 'cricbuzz-cricket2.p.rapidapi.com'
     }
   };

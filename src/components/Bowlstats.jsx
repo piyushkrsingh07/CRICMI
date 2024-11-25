@@ -1,12 +1,12 @@
 import React from 'react'
 import { useLocation, useSearchParams } from 'react-router-dom'
-import useIndiaBowlStats from '../../hooks/useIndiaBowlStats';
+
 import { useSelector } from 'react-redux';
 
 const Bowlstats = () => {
     const location=useLocation();
     const {id}=location.state||{};
-    useIndiaBowlStats({id})
+    // useIndiaBowlStats({id})
     console.log("dekh id bowl stat m")
     console.log(id)
 
@@ -17,12 +17,14 @@ const Bowlstats = () => {
     if(!playerIndBowlStat){
       <div className='text-white'>Nhi mila data</div>
     }
+    
     const headers=playerIndBowlStat.headers;
     const rows=playerIndBowlStat.values;
     console.log("dekho header")
     console.log(headers)
     console.log(" dekho rows")
     console.log(rows)
+    
 
 
   return (

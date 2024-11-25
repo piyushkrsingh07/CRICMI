@@ -68,6 +68,8 @@ navigate("/profiledata",{
   console.log(name)
   console.log("dekho jo id bhja h")
   console.log(id)
+  console.log("dekho jo boeling style in location")
+  console.log(bowlingStyle)
  
 }
 

@@ -6,7 +6,7 @@ import { useSelector } from 'react-redux';
 const Batstats = () => {
     const location=useLocation();
     const {id}=location.state||{};
-    useIndiaBatStats({id})
+    // useIndiaBatStats({id})
     console.log("dekh id batstat mai")
     console.log(id)
     const playerIndBatStat=useSelector(

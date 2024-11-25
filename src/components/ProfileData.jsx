@@ -7,15 +7,21 @@ import { useSelector } from 'react-redux'
 import NewsCard from './NewsCard'
 import Batstats from './Batstats'
 import Bowlstats from './Bowlstats'
+import useIndiaProfileData from '../../hooks/useIndiaProfileData'
+import useIndiaBatStats from '../../hooks/useIndiaBatStats'
+import useIndiaBowlStats from '../../hooks/useIndiaBowlStats'
 
 const ProfileData = () => {
 
 
   const location=useLocation()
-  const{id}=location.state||{};
-  // console.log("dekho id profile data m")
-  // console.log(id);
+  const{id,finalImageUrl,battingStyle,bowlingStyle,name}=location.state||{};
+  console.log("dekho id profile data m")
+  console.log(id);
   useIndiaNews({id})
+  useIndiaProfileData({id})
+  useIndiaBatStats({id})
+  useIndiaBowlStats({id})
   const playerIndNews=useSelector(
     (store)=>store.cricnews?.currIndPlayersNews?.storyList
   )

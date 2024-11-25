@@ -19,7 +19,7 @@ useEffect(()=>{
    const fetchImage=async()=>{
     try{
          // Add a delay of 1 second (1000 milliseconds)
-     await delay(2000);
+     await delay(3000);
     console.log("hello")
       const response=await fetch('https://cricbuzz-cricket.p.rapidapi.com/img/v1/i1/'+correct+'/i.jpg?p=gthumb'||'https://cricbuzz-cricket.p.rapidapi.com/img/v1/i1/'+correct+'/i.jpg?p=de'||'https://cricbuzz-cricket.p.rapidapi.com/img/v1/i1/'+correct+'/i.jpg?p=thumb'||'https://cricbuzz-cricket.p.rapidapi.com/img/v1/i1/'+correct+'/i.jpg?p=det',API_OPTIONS)
      
