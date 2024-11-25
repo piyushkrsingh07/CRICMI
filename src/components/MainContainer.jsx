@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux'
 import PlayerList from './PlayerList'
 import useIndiaData from '../../hooks/useIndiaData'
 import { useEffect } from 'react'
+import Score from './Score'
 
 const MainContainer = () => {
     
@@ -21,8 +22,12 @@ const MainContainer = () => {
 
 
   return (
-    <div className='w-screen h-screen bg-black overflow-x-auto no-scrollbar'>
+    <div className='w-screen h-auto bg-black overflow-x-auto no-scrollbar'>
       <div className=' '>
+        <div>
+          <div className='text-3xl text-white py-4 ml-4'>Live Score</div>
+          <Score/>
+        </div>
     <PlayerList title={"Indian Team"} indteam={indteam}/>
       </div>
     </div>
