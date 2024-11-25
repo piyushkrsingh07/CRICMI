@@ -22,13 +22,15 @@ const MainContainer = () => {
 
 
   return (
-    <div className='w-screen h-auto bg-black overflow-x-auto no-scrollbar'>
+    <div className='w-screen h-auto bg-black '>
       <div className=' '>
-        <div>
+        <div className='overflow-hidden'>
           <div className='text-3xl text-white py-4 ml-4'>Live Score</div>
           <Score/>
         </div>
+        <div className='overflow-x-auto no-scrollbar'>
     <PlayerList title={"Indian Team"} indteam={indteam}/>
+    </div>
       </div>
     </div>
   )

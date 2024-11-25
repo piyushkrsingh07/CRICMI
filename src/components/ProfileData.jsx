@@ -58,7 +58,7 @@ return <div>Loading player data...</div>;
     </div>
     <div className='flex w-screen bg-black'>
     <div className='w-[75%] h-auto ml-[50px]'>
-      <div className='text-white'>{playerIndData.name} Profile</div>
+      <div className='text-white p-2 text-2xl font-semibold'>{playerIndData.name} Profile</div>
       <div className='text-white'>
         {playerIndData.bio.split(' ').slice(0, 50).join(' ') + '...'}
       </div>

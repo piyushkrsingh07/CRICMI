@@ -25,7 +25,7 @@ const Batstats = () => {
     console.log(rows)
   return (
     <div className='overflow-x-auto'>
-        <div className='text-white font-semibold'>Batting Statistics</div>
+        <div className='text-white font-semibold text-2xl p-2'>Batting Statistics</div>
         <table className='text-white border-collapse  w-full text-center bg-blue-950 bg-blend-soft-light'>
             <thead>
                 <tr>

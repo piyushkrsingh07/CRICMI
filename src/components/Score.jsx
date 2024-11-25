@@ -58,7 +58,7 @@ const Score = () => {
         getScore();
       },[])
   return (
-    <div>
+    <div className=''>
        
     <div className='flex flex-col gap-y-3 text-white bg-blue-950 rounded-md w-1/3 mx-auto pt-2 pb-2 h-auto'>
     <div className='ml-7'>{status}</div>

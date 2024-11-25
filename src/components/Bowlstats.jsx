@@ -29,7 +29,7 @@ const Bowlstats = () => {
 
   return (
     <div>
-         <div className='text-white font-semibold'>Bowling Statistics</div>
+         <div className='text-white font-semibold p-2 text-2xl'>Bowling Statistics</div>
         <table className='text-white border-collapse  w-full text-center bg-blue-950 bg-blend-soft-light'>
             <thead>
                 <tr>
