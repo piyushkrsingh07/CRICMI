@@ -4,8 +4,8 @@ import { API_OPTIONS } from '../src/utils/constants'
 import { addCurrIndPlayersNews } from '../src/redux/Slices/newsSlice'
 
 const useIndiaNews = ({id}) => {
-    console.log("dekho id news hook m")
-    console.log(id)
+    // console.log("dekho id news hook m")
+    // console.log(id)
     const dispatch=useDispatch()
     const getIndiaPlayerNews=async()=>{
         try{

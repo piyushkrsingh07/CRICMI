@@ -11,11 +11,10 @@ import Bowlstats from './Bowlstats'
 const ProfileData = () => {
 
 
-  const location=useLocation();
-  const {id}=location.state||{};
-
-  console.log("dekho id profile data m")
-  console.log(id);
+  const location=useLocation()
+  const{id}=location.state||{};
+  // console.log("dekho id profile data m")
+  // console.log(id);
   useIndiaNews({id})
   const playerIndNews=useSelector(
     (store)=>store.cricnews?.currIndPlayersNews?.storyList
@@ -24,7 +23,16 @@ const ProfileData = () => {
  console.log(playerIndNews)
 //  const topnews=playerIndNews.slice(0,4);
 const topnews = Array.isArray(playerIndNews) ? playerIndNews.slice(8,13) : [];
-
+// const newsPlayer=topnews.entitlements;
+// console.log("see image id")
+// if(!topnews.story.imageId)
+// {
+//   return <div>No image id</div>
+// }
+// console.log("see image id")
+// console.log(topnews.story?.imageId)
+// console.log("headline")
+// console.log(topnews.story?.hline)
 const playerIndData=useSelector(
   (store)=>store.cricprof?.currIndPlayersData
 )
