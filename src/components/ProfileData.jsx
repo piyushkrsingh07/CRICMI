@@ -28,7 +28,7 @@ const ProfileData = () => {
  console.log("news in profile data")
  console.log(playerIndNews)
 //  const topnews=playerIndNews.slice(0,4);
-const topnews = Array.isArray(playerIndNews) ? playerIndNews.slice(8,13) : [];
+const topnews = Array.isArray(playerIndNews) ? playerIndNews.slice(6,17) : [];
 // const newsPlayer=topnews.entitlements;
 // console.log("see image id")
 // if(!topnews.story.imageId)

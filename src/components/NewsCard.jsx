@@ -13,6 +13,8 @@ const NewsCard = ({hline,imageId}) => {
   console.log("dekh image ki url:",imageUrl);
 
   const finalImageUrl=imageUrl||playerIndImg;
+  console.log("dekho final image url")
+  console.log(finalImageUrl)
 
   console.log("dekho id news m")
   console.log({imageId});

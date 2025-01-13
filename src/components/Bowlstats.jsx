@@ -18,8 +18,8 @@ const Bowlstats = () => {
       <div className='text-white'>Nhi mila data</div>
     }
     
-    const headers=playerIndBowlStat.headers;
-    const rows=playerIndBowlStat.values;
+    const headers=playerIndBowlStat?.headers;
+    const rows=playerIndBowlStat?.values;
     console.log("dekho header")
     console.log(headers)
     console.log(" dekho rows")
@@ -33,7 +33,7 @@ const Bowlstats = () => {
         <table className='text-white border-collapse  w-full text-center bg-blue-950 bg-blend-soft-light'>
             <thead>
                 <tr>
-                {headers.map((header, index) => (
+                {headers?.map((header, index) => (
               <th key={index} className=" px-4 py-2">
                 {header}
               </th>

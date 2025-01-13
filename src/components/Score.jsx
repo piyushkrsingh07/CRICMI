@@ -63,7 +63,7 @@ const Score = () => {
     <div className='flex flex-col gap-y-3 text-white bg-blue-950 rounded-md w-1/3 mx-auto pt-2 pb-2 h-auto'>
     <div className='ml-7'>{status}</div>
       <div>
-         <h3 className='font-bold ml-7'>India Score</h3>
+         <h3 className='font-bold ml-7'>WESTINDIES SCORE</h3>
       {team1Score
     ? Object.entries(team1Score).map(([key, value]) => (
         <div key={key} className="flex pr-5">
@@ -80,7 +80,7 @@ const Score = () => {
   
      </div>
      <div>
-      <h3 className='font-bold ml-7'>Australia Score</h3>
+      <h3 className='font-bold ml-7'>PAKISTAN SCORE</h3>
      {team2Score
     ? Object.entries(team2Score).map(([key, value]) => (
         <div key={key} className="flex mr-5">
